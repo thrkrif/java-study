@@ -1,7 +1,6 @@
 public class Test {
     public static void main(String[] args) {
-        int level;
-        level = 10;
-        System.out.println(level);
+       final double PI = 3.14;
+        System.out.println(PI);
     }
 }
