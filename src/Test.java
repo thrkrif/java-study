@@ -1,11 +1,17 @@
 public class Test {
     public static void main(String[] args) {
-       String name = "Ja" + "Va";
-       String str = name + 8.0;
+       int x=10;
+       int y=20;
+       int tmp;
+        System.out.println("x="+x);
+        System.out.println("y="+y);
 
-        System.out.println(name);
-        System.out.println(str);
-        System.out.println(""+7+7);
-        System.out.println(7+7+"");
+       tmp = x;
+       x = y;
+       y = tmp;
+
+        System.out.println(tmp);
+        System.out.println(x);
+        System.out.println(y);
     }
 }
