@@ -1,9 +1,14 @@
 import java.util.Arrays;
-
+import java.util.Scanner;
 public class Test {
+
     public static void main(String[] args) {
-        String ur1 = "www.codechobo.com";
-                double d = 1.23456789;
-        System.out.printf("%14.10f", d);
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("두자리 정수를 하나 입력해주세요.");
+        String input = scanner.nextLine();
+        int num = Integer.parseInt(input);
+        System.out.println("입력 내용: "+input);
+        System.out.printf("num=%d%n", num);
     }
 }
