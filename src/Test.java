@@ -1,7 +1,11 @@
 public class Test {
     public static void main(String[] args) {
-       char i = '글';
-       char c2 = '\uAE00';
-        System.out.println(c2);
+       String name = "Ja" + "Va";
+       String str = name + 8.0;
+
+        System.out.println(name);
+        System.out.println(str);
+        System.out.println(""+7+7);
+        System.out.println(7+7+"");
     }
 }
