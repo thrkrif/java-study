@@ -3,8 +3,11 @@ import java.util.Scanner;
 public class Test {
 
     public static void main(String[] args) {
-      double pi = 3.141592;
-      double shortPi = Math.round(pi * 1000) / 1000.0;
-        System.out.println(shortPi);
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("이름 : ");
+        String name = sc.nextLine();
+        System.out.println(name + "님 안녕하세요");
+
     }
 }
