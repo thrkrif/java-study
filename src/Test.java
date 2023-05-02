@@ -1,30 +1,37 @@
+import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Scanner;
 public class Test {
 
     public static void main(String[] args) {
 
-        int score = 0;
-        char grade = ' ', opt = '0';
-
-        System.out.print("점수를 입력하세요.>");
+        System.out.println("현재 월을 입력하세요>");
 
         Scanner scanner = new Scanner(System.in);
-        score = scanner.nextInt();
+        int month = scanner.nextInt();
 
-        System.out.printf("당신의 점수는 %d입니다.%n", score);
-
-        if (score >= 90){
-            grade = 'A';
-            if(score >= 98){
-                opt = '+';
-            }
-            else{
-                opt = '-';
-            }
+        switch (month){
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("현재의 계절은 봄입니다.");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("현재의 계절은 여름입니다.");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("현재의 계절은 가을입니다.");
+                break;
+            case 12:
+            case 1:
+            case 2:
+                System.out.println("현재의 계절은 겨울입니다.");
+                break;
         }
 
-
-        System.out.printf("당신의 학점은 %c%c입니다.%n", grade, opt);
     }
 }
