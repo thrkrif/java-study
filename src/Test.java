@@ -16,7 +16,8 @@ public class Test {
             sum += ++i;
 
         }
-        System.out.println("i의 값은" + i);
+        System.out.println("" +
+                "i의 값은" + i);
         System.out.println("sum의 값은" + sum);
 
        }
