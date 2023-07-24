@@ -5,26 +5,19 @@ public class Test {
 
     public static void main(String[] args) {
 
-       int input = 0;   //내가 입력할 값
-       int answer = 0;  // 정답
-       int count = 0;   // 몇번만에 정답을 맞췄는지 알려주는 계산기
-       answer = (int)(Math.random()*100) + 1;
-       Scanner scanner = new Scanner(System.in);
+      // 반복문, break문을 이용한다. sum의 총합이 100 이상일때 i의 값과 sum의 값을 출력하는 알고리즘
+        int sum = 0;
+        int i = 0;
 
-       do {
-           System.out.println("1부터 100사이의 정수를 입력해주세요>");
-           input = scanner.nextInt();
-           if(input>answer){
-               System.out.println("숫자가 높습니다! 더 낮은 숫자를 입력해주세요.");
-           }
-           else if (input<answer) {
-               System.out.println("숫자가 낮습니다! 더 높은 숫자를 입력해주세요.");
-           }
-           count++;
-       } while( input != answer);
-        if (input == answer){
-            System.out.printf("정답은 %d였습니다. 당신은 %d번만에 정답을 맞추었습니다.", input, count);
+        while(true){
+            if(sum>100)
+                break;
+            ++i;
+            sum += i;
+
         }
+        System.out.println("i의 값은" + i);
+        System.out.println("sum의 값은" + sum);
 
        }
 
