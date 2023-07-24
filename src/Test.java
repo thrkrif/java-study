@@ -12,8 +12,8 @@ public class Test {
         while(true){
             if(sum>100)
                 break;
-            ++i;
-            sum += i;
+
+            sum += ++i;
 
         }
         System.out.println("i의 값은" + i);
