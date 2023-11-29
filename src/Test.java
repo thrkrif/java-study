@@ -4,21 +4,21 @@ import java.util.Scanner;
 public class Test {
 
     public static void main(String[] args) {
-
-
-    int[] elements = {20,30,50,10,40};
-    int max, min = elements[0];
-    for(int i = 1; i < elements.length; i++){
-        if(min > elements[i])
-            min = elements[i];
-
+        MyMath mm = new MyMath();
+    long result1 = mm.add(5L, 3L);
+        System.out.println("add(5L,3L) =" + result1);
     }
-        System.out.println(min
-        );
-
-      }
-
-
 }
 
 
+class MyMath{
+    long add(long a, long b){
+        long result = a+b;
+        return result;
+    }
+    long subtract(long a, long b){
+        return a-b;
+    }
+    long multiply(long a, long b){return a*b;}
+    long divide(long a, long b){return a/b;}
+}
