@@ -4,21 +4,27 @@ import java.util.Scanner;
 public class Test {
 
     public static void main(String[] args) {
-        MyMath mm = new MyMath();
-    long result1 = mm.add(5L, 3L);
-        System.out.println("add(5L,3L) =" + result1);
+    Tv t1 = new Tv();
+    Tv t2 = new Tv();
+
+    t1.channel = 7;
+    t1.channelDown();
+        System.out.println("t1의 채널은" + t1.channel + "입니다."
+        );
+    t2.channel = 7;
+    t2.channelUp();
+        System.out.println("t2의 채널은" + t2.channel + "입니다."
+        );
     }
+}
+class Tv{
+    String color;
+    boolean power;
+    int channel;
+
+    void power() { power = !power; }
+    void channelUp(){ ++channel; }
+    void channelDown(){ --channel; }
 }
 
 
-class MyMath{
-    long add(long a, long b){
-        long result = a+b;
-        return result;
-    }
-    long subtract(long a, long b){
-        return a-b;
-    }
-    long multiply(long a, long b){return a*b;}
-    long divide(long a, long b){return a/b;}
-}
