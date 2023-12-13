@@ -1,30 +1,28 @@
 import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Scanner;
+
+class Data2 {int x;}
+
 public class Test {
 
     public static void main(String[] args) {
-    Tv t1 = new Tv();
-    Tv t2 = new Tv();
 
-    t1.channel = 7;
-    t1.channelDown();
-        System.out.println("t1의 채널은" + t1.channel + "입니다."
-        );
-    t2.channel = 7;
-    t2.channelUp();
-        System.out.println("t2의 채널은" + t2.channel + "입니다."
-        );
+        Data2 d = new Data2();
+        d.x = 10;
+        System.out.println("main 메서드의 d.x="+ d.x +"입니다.");
+
+        change(d);
+        System.out.println("After change(d)");
+        System.out.println("main 메서드의 d.x="+ d.x +"입니다.");
     }
-}
-class Tv{
-    String color;
-    boolean power;
-    int channel;
 
-    void power() { power = !power; }
-    void channelUp(){ ++channel; }
-    void channelDown(){ --channel; }
+    static void change(Data2 d){
+        d.x=1000;
+        System.out.println("change 메서드의 d.x="+d.x+"입니다.");
+    }
+
 }
+
 
 
