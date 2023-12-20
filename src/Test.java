@@ -2,27 +2,25 @@ import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Scanner;
 
-class MyMath2 {
-
-    int add(int[] a){
-        System.out.print("int add(int[] a) - ");
-        int result = 0;
-        for(int i = 0; i < a.length; i++)
-            result += a[i];
-
-        return result;
-    }
-
+class Data_1 {
+    int value;
 }
+
+class Data_2 {
+    int value;
+
+    Data_2(int x){
+        value = x;
+    }
+}
+
 
 public class Test {
 
     public static void main(String[] args) {
 
-        MyMath2 mm = new MyMath2();
-
-        int[] a = {100,200,300};
-        System.out.println("mm.add(a) 결과: " + mm.add(a));
+        Data_1 d1 = new Data_1();
+        Data_2 d2 = new Data_2(10);
     }
 
 }
