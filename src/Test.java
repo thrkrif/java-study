@@ -2,25 +2,26 @@ import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Scanner;
 
-class Data_1 {
-    int value;
-}
 
-class Data_2 {
-    int value;
+class Ex6_15{
 
-    Data_2(int x){
-        value = x;
-    }
-}
+static int[] arr = new int[10];
 
+static{
+        for(int i=0; i<arr.length; i++)
+        arr[i] = (int)(Math.random()*10) + 1;
+        }
+        
+        }
 
 public class Test {
 
     public static void main(String[] args) {
 
-        Data_1 d1 = new Data_1();
-        Data_2 d2 = new Data_2(10);
+        for(int i=0; i< Ex6_15.arr.length; i++)
+        System.out.println("arr["+i+"] : " + Ex6_15.arr[i])
+                ;
+
     }
 
 }
