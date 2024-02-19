@@ -3,38 +3,40 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 
-class Tv {
-    boolean power;
-    int channel;
+class Point {
+    int x;
+    int y;
 
-    void power() {power = !power;}
-    void channelUp() { ++channel; }
-    void channelDown() { --channel; }
+
+
+    Point(int x, int y){
+        this.x = x;
+        this.y = y;
+    }
+    String getLocation(){
+        return "x :" + x + ", y :" + y;
+    }
 
 }
 
-class SmartTv extends Tv{
-    boolean caption;
+class Point3D extends Point{
+    int z;
 
-    void displaycaption(String text){
-        if(caption){
-            System.out.println(text);
-        }
+
+    Point3D(int x, int y, int z){
+        super(x,y);
+        this.z=z;
     }
-
+    String getLocation(){
+        return "x :" + x + ", y :" + y + ", z :" + z;   //오버라이딩
+    }
 }
 
 public class Test {
 
     public static void main(String[] args) {
 
-        SmartTv stv = new SmartTv();
-        stv.channel = 10;
-        stv.channelUp();
-        System.out.println(stv.channel);
-        stv.caption = true;
-        stv.displaycaption("Hello, World");
-
+        Point3D p3 = new Point3D(1,2,3);
 
     }
 
