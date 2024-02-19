@@ -3,27 +3,38 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 
-class Ex6_15{
+class Tv {
+    boolean power;
+    int channel;
 
-static int[] arr = new int[10];
+    void power() {power = !power;}
+    void channelUp() { ++channel; }
+    void channelDown() { --channel; }
 
-static{
-        for(int i=0; i<arr.length; i++)
-        arr[i] = (int)(Math.random()*10) + 1;
+}
+
+class SmartTv extends Tv{
+    boolean caption;
+
+    void displaycaption(String text){
+        if(caption){
+            System.out.println(text);
         }
+    }
 
-
-
-        
-        }
+}
 
 public class Test {
 
     public static void main(String[] args) {
 
-        for(int i=0; i< Ex6_15.arr.length; i++)
-        System.out.println("arr["+i+"] : " + Ex6_15.arr[i])
-                ;
+        SmartTv stv = new SmartTv();
+        stv.channel = 10;
+        stv.channelUp();
+        System.out.println(stv.channel);
+        stv.caption = true;
+        stv.displaycaption("Hello, World");
+
 
     }
 
